@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         width: '100%',
     },
     headerContainer: {
-        backgroundColor: colors.background_1,
+        backgroundColor: colors.background1,
         fontSize:30,
         width: '100%',
     },
@@ -31,7 +31,6 @@ const styles = StyleSheet.create({
     categoriesContainer: {
         flex: 1,
         padding: 45,
-        backgroundColor: 'orange',
     },
     cardContainer: {
         width: '65%',
@@ -39,11 +38,11 @@ const styles = StyleSheet.create({
         marginRight: 'auto',
         marginTop:5,
         marginBottom:10,
-        backgroundColor: '#ffffff',
+        backgroundColor: colors.buttons1,
         shadowOpacity: 0.58,
         shadowRadius: 16.00,
         elevation: 18,
-        shadowColor: "#000",
+        shadowColor: colors.background1,
         shadowOffset: {
             width: 0,
             height: 12,

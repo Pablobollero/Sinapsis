@@ -1,9 +1,9 @@
 const colors = {
-    background_1: '#000000',
-    background_2: '#252525',
-    background_3: '#ffff',
-    hover_1: '#00f3ff',
-    buttons_1: '#5bbfc4',
+    background1: '#000000',
+    background2: '#252525',
+    background3: '#ffff',
+    buttons1: '#5bbfc4',
+    buttons2: '#00f3ff',
 }
 
 export default colors;
