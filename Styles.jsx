@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
         marginBottom:40,
     },
     cardDetail: {
-        width: '75%',
+        width: '100%',
         height: '100%',
     },
     categoryItemText: {
@@ -67,7 +67,8 @@ const styles = StyleSheet.create({
         fontFamily:'PoppinsRegular',
     },
     categoryItemImage: {
-        width: 25,
+        width: '100%',
+        height: '100%',
     },
     imput: {
         borderRadius: 8,
