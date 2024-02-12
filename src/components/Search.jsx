@@ -16,3 +16,13 @@ const Search = ({keyword, onSearch}) => {
 };
 
 export default Search;
+
+
+
+
+{/* <View style={styles.imputContainer}>
+<TextInput onChangeText={onSearch} value={keyword} style={styles.imput} placeholder='Buscar producto...'/>
+<Pressable>
+<AntDesign name='search1' size={25} color='black' />
+</Pressable>
+</View> */}

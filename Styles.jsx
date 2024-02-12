@@ -49,10 +49,25 @@ const styles = StyleSheet.create({
             height: 12,
         },
     },
+    itemListCategoriesContainer: {
+        flex: 1,
+    },
+    cardDetailContainer: {
+        height: 200,
+        marginTop:40,
+        marginBottom:40,
+    },
+    cardDetail: {
+        width: '75%',
+        height: '100%',
+    },
     categoryItemText: {
         fontSize: 15,
         textAlign:'center',
         fontFamily:'PoppinsRegular',
+    },
+    categoryItemImage: {
+        width: 25,
     },
     imput: {
         borderRadius: 8,

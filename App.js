@@ -17,7 +17,7 @@ export default function App() {
   return (
     <View style={styles.appContainer}>
       <StatusBar style='auto'/>
-      {categorySelected ? ( <ItemListCategories />) : (
+      {categorySelected ? ( <ItemListCategories category={categorySelected}/>) : (
         <Home setCategorySelected={setCategorySelected} />
       )}
     </View>
