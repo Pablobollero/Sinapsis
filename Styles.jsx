@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
     categoryItemText: {
         fontSize: 15,
         textAlign:'center',
+        fontFamily:'PoppinsRegular',
     },
     imput: {
         borderRadius: 8,

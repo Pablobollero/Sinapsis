@@ -16,7 +16,7 @@ const ItemListCategories = ({category}) => {
             );
             setProducts(filteredProducts)
         }
-    }, [])
+    }, [category, keyword])
     
     return (
         <View style={styles.itemListCategoriesContainer}>

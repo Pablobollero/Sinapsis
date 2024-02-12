@@ -4,12 +4,12 @@ import styles from '../../Styles';
 import categories from '../data/categories.json';
 import CategoryItem from './CategoryItem';
 
-const Categories = () => {
+const Categories = ({setCategorySelected}) => {
     return (
         <View style={styles.categoriesContainer}>
             <FlatList
             data={categories}
-            renderItem={({item}) => <CategoryItem category={item}/>}
+            renderItem={({item}) => <CategoryItem setCategorySelected={setCategorySelected} category={item}/>}
             keyExtractor={(category) => category}
             />
         </View>
