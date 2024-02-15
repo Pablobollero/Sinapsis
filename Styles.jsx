@@ -53,12 +53,12 @@ const styles = StyleSheet.create({
     },
     cardDetailContainer: {
         height: 200,
-        marginTop:40,
-        marginBottom:40,
+        marginTop:15,
+        marginBottom:15,
     },
     cardDetail: {
-        width: '100%',
-        height: '100%',
+        width: '65%',
+        height: '65%',
     },
     categoryItemText: {
         fontSize: 15,
@@ -81,6 +81,16 @@ const styles = StyleSheet.create({
         justifyContent: 'space-evenly',
         alignItems: 'center',
         marginBottom: 25,
+    },
+    itemListCategoriesBackButton: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginBottom: 10,
+        marginTop: 10,
+        gap: 8,
+    },
+    backButtonText: {
+        fontSize: 14,
     },
 });
 

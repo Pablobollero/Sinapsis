@@ -1,11 +1,12 @@
-import { FlatList, View } from "react-native";
+import { FlatList, Pressable, Text, View } from "react-native";
 import styles from "../../Styles";
 import allProducts from '../data/products.json';
 import ItemDetail from "../components/ItemDetail";
 import Search from "../components/Search";
 import { useEffect, useState } from "react";
+import { AntDesign } from '@expo/vector-icons';
 
-const ItemListCategories = ({category}) => {
+const ItemListCategories = ({category, setCategorySelected}) => {
     const [products, setProducts] = useState([]);
     const [keyword, setKeyword] = useState('');
     
@@ -20,6 +21,10 @@ const ItemListCategories = ({category}) => {
     
     return (
         <View style={styles.itemListCategoriesContainer}>
+            <Pressable onPress={()=>setCategorySelected('')} style={styles.itemListCategoriesBackButton}>
+                <AntDesign name="back" size={12} color="black" />
+                <Text style={styles.backButtonText}>Volver</Text>
+            </Pressable>
             <Search onSearch={setKeyword} />
             <FlatList 
             data={products}

@@ -15,3 +15,5 @@ const ItemDetail = ({ product }) => {
 };
 
 export default ItemDetail;
+
+// ProductItem = ItemDetail
