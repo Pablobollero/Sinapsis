@@ -1,5 +1,4 @@
 import { View, TextInput, Pressable } from 'react-native';
-import React, { useState } from 'react';
 import styles from '../../Styles';
 import { AntDesign } from '@expo/vector-icons';
 

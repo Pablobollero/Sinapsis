@@ -48,24 +48,34 @@ const styles = StyleSheet.create({
             height: 12,
         },
     },
-    itemListCategoriesContainer: {
+    itemContainer: {
         flex: 1,
+        width: '100%',
+        padding: 5,
     },
-    cardDetailContainer: {
+    productItemContainer: {
+        flex:1,
+        marginBottom: 35,
         height: 200,
-        marginTop:15,
-        marginBottom:15,
+        paddingTop:25,
+        paddingBottom:25,
     },
-    cardDetail: {
-        width: '65%',
-        height: '65%',
+    productItem: {
+        flex:1,
+        width: '75%',
+        height: '75%',
     },
-    categoryItemText: {
-        fontSize: 15,
+    productItemText0: {
+        fontSize: 18,
         textAlign:'center',
         fontFamily:'PoppinsRegular',
     },
-    categoryItemImage: {
+    productItemText1: {
+        fontSize: 14,
+        textAlign:'center',
+        fontFamily:'PoppinsRegular',
+    },
+    productItemImage: {
         width: '100%',
         height: '100%',
     },
@@ -75,6 +85,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         width: '80%',
         fontSize: 20,
+        marginTop: 18,
     },
     imputContainer: {
         flexDirection: 'row',
@@ -91,6 +102,34 @@ const styles = StyleSheet.create({
     },
     backButtonText: {
         fontSize: 14,
+    },
+    itemDetail: {
+        flex: 0.65,
+        padding: 3,
+        alignItems: 'center',
+    },
+    itemDetailTitleContainer: {
+        alignItems: 'center',
+        marginTop: 18,
+    },
+    itemDetailTitle: {
+        fontSize: 25,
+    },
+    itemDetailImage: {
+        width: '85%',
+        height: '85%',
+        marginTop: 30,
+    },
+    itemDetailText: {
+        fontSize: 18,
+        marginTop: 40,
+    },
+    itemDetailPressable: {
+        alignItems: 'center',
+    },
+    itemDetailBuy: {
+        fontSize: 30,
+        marginTop: 60,
     },
 });
 

@@ -1,12 +1,12 @@
 import { FlatList, Pressable, Text, View } from "react-native";
 import styles from "../../Styles";
 import allProducts from '../data/products.json';
-import ItemDetail from "../components/ItemDetail";
+import ProductItem from "../components/ProductItem";
 import Search from "../components/Search";
 import { useEffect, useState } from "react";
 import { AntDesign } from '@expo/vector-icons';
 
-const ItemListCategories = ({category, setCategorySelected}) => {
+const ItemListCategories = ({category, setCategorySelected, setProductDetailId}) => {
     const [products, setProducts] = useState([]);
     const [keyword, setKeyword] = useState('');
     
@@ -20,7 +20,7 @@ const ItemListCategories = ({category, setCategorySelected}) => {
     }, [category, keyword])
     
     return (
-        <View style={styles.itemListCategoriesContainer}>
+        <View style={styles.itemContainer}>
             <Pressable onPress={()=>setCategorySelected('')} style={styles.itemListCategoriesBackButton}>
                 <AntDesign name="back" size={12} color="black" />
                 <Text style={styles.backButtonText}>Volver</Text>
@@ -28,7 +28,7 @@ const ItemListCategories = ({category, setCategorySelected}) => {
             <Search onSearch={setKeyword} />
             <FlatList 
             data={products}
-            renderItem={({item}) => <ItemDetail product= {item} />}
+            renderItem={({item}) => <ProductItem product= {item} setProductDetailId={setProductDetailId} />}
             keyExtractor={(item) => item.id }/>
         </View>
     );
