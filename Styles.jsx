@@ -1,16 +1,9 @@
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 import colors from "./src/global/colors";
 import Constants from 'expo-constants';
 
 const styles = StyleSheet.create({
-    appContainer: {
-        flex: 1,
-        backgroundColor: '#ffff',
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginTop: Constants.statusBarHeight,
-    },
-    homeContainer: {
+        homeContainer: {
         flex: 1,
         width: '100%',
     },
@@ -22,6 +15,7 @@ const styles = StyleSheet.create({
         backgroundColor: colors.background1,
         fontSize:30,
         width: '100%',
+        marginTop: Platform.OS === 'android' ? Constants.statusBarHeight : 0,
     },
     headerTitle: {
         color:'#fff',
@@ -115,21 +109,29 @@ const styles = StyleSheet.create({
     itemDetailTitle: {
         fontSize: 25,
     },
-    itemDetailImage: {
+    itemDetailImageContainer: {
         width: '85%',
-        height: '85%',
+        height: '40%',
         marginTop: 30,
+    },
+    itemDetailImage: {
+        width: '100%',
+        height: '100%',
     },
     itemDetailText: {
         fontSize: 18,
-        marginTop: 40,
+        marginTop: 55,
+    },
+    itemDetailTextMoney: {
+        fontSize: 25,
+        marginTop: 55,
     },
     itemDetailPressable: {
         alignItems: 'center',
     },
     itemDetailBuy: {
         fontSize: 30,
-        marginTop: 60,
+        marginTop: 75,
     },
 });
 
