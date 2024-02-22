@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "userId": 2,
+        "createdAt": 1679869276580,
+        "items": [
+        {
+        "id": 29,
+        "title": "Multifuncion Hp Deskjet 2375",
+        "description": "Impresión y escaneos confiables, configuración sencilla y los documentos cotidianos con un valor excelente.",
+        "price": 144210,
+        "discountPercentage": 5.19,
+        "rating": 4.98,
+        "stock": 61,
+        "brand": "HP",
+        "category": "Impresoras",
+        "thumbnail": "https://www.multimax.net/cdn/shop/products/PS0101052_sideb_1200x.jpg?v=1603125418",
+        "images": [
+            "https://hard-digital.com.ar/public/files/Impresora%20Hp%20Multifuncion%20Deskjet%20Ink%20Advantage%202375/5.jpg",
+            "https://http2.mlstatic.com/D_NQ_NP_743769-MLU72847775887_112023-O.webp"
+        ],
+        "quantity": 3
+    },
+    {
+        "id": 31,
+        "title": "Ddr4 8gb 3200mhz Hikvision",
+        "description": "La memoria RAM Hikvision S1 DDR4 de 8 GB a 3200 MHz ofrece un rendimiento potente y confiable para tus sistemas. Con bajo voltaje y formato SO-DIMM, es ideal para mejorar la velocidad y la capacidad de tus dispositivos.",
+        "price": 24090,
+        "discountPercentage": 5.19,
+        "rating": 4.98,
+        "stock": 61,
+        "brand": "Hikvision",
+        "category": "Memorias Laptop",
+        "thumbnail": "https://edshop.edsystem.eu/IMGCACHE/_1633/1633083_0b_9.jpg",
+        "images": [
+            "https://i.ebayimg.com/images/g/E-QAAOSw57Vk1tCc/s-l400.jpg",
+            "https://mla-s1-p.mlstatic.com/691396-MLA47967446225_102021-F.jpg"
+        ],
+        "quantity": 2
+    }]},
+    {
+        "id": 2,
+        "userId": 2,
+        "createdAt": 1679832276580,
+        "items": [
+            {
+        "id": 32,
+        "title": "Ddr4 16gb 3200mhz Hp V8 Rgb",
+        "description": "Amplia compatibilidad, función de enfriamiento altamente efectiva. La RAM overclocked proporciona un potente soporte para juegos",
+        "price": 72280,
+        "discountPercentage": 5.19,
+        "rating": 4.98,
+        "stock": 61,
+        "brand": "HP",
+        "category": "Memorias PC",
+        "thumbnail": "https://travim.com.mx/cdn/shop/products/07_7eh86aa_23abm_v8-6_31_3_2022_10_25_4_398.jpg?v=1660944518",
+        "images": [
+            "https://m.media-amazon.com/images/I/61oSapDoJgL._AC_UF1000,1000_QL80_.jpg",
+            "https://www.pccompu.com.uy/imgs/productos/productos34_50286.jpg"
+        ],
+        "quantity": 1
+    },
+    { 
+        "id": 37,
+        "title": "Amd Am4 Msi B450m-a Pro Max",
+        "description": "Placa madre AMD AM4 inspirada en los diseños arquitectónicos, con Core Boost, DDR4 Boost, Turbo M.2, USB 3.2 Gen1",
+        "price": 115590,
+        "discountPercentage": 5.19,
+        "rating": 4.98,
+        "stock": 61,
+        "brand": "MSI",
+        "category": "Motherboards",
+        "thumbnail": "https://assets.quzo.co.uk/site/catalogue/full/2019/09/msi-b450m-pro-vdh-max-amd-socket-am4-amd-ryzen-ddr4-sdram-dimm-1866-2133-2400-2667-2800-2933-30-214098.jpg.jpg",
+        "images": [
+            "https://storage-asset.msi.com/global/picture/image/feature/mb/B450/B450MAProMax/main-hero-performance.jpg",
+            "https://assets.quzo.co.uk/site/catalogue/full/2019/09/msi-b450m-pro-vdh-max-amd-socket-am4-amd-ryzen-ddr4-sdram-dimm-1866-2133-2400-2667-2800-2933-30-214098.jpg.jpg"
+        ],
+        "quantity": 2
+    }]}
+]

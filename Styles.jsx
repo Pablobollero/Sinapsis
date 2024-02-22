@@ -3,9 +3,13 @@ import colors from "./src/global/colors";
 import Constants from 'expo-constants';
 
 const styles = StyleSheet.create({
-        homeContainer: {
+    appContainer: {
         flex: 1,
         width: '100%',
+    },
+    homeContainer: {
+    flex: 1,
+    width: '100%',
     },
     itemListCategoriesContainer: {
         flex: 1,
@@ -25,6 +29,7 @@ const styles = StyleSheet.create({
     categoriesContainer: {
         flex: 1,
         padding: 45,
+        backgroundColor: colors.background3,
     },
     cardContainer: {
         width: '65%',
@@ -46,18 +51,18 @@ const styles = StyleSheet.create({
         flex: 1,
         width: '100%',
         padding: 5,
+        backgroundColor: colors.background3,
     },
     productItemContainer: {
         flex:1,
         marginBottom: 35,
-        height: 200,
+        height: 250,
         paddingTop:25,
         paddingBottom:25,
     },
     productItem: {
-        flex:1,
         width: '75%',
-        height: '75%',
+        height: '85%',
     },
     productItemText0: {
         fontSize: 18,
@@ -111,7 +116,7 @@ const styles = StyleSheet.create({
     },
     itemDetailImageContainer: {
         width: '85%',
-        height: '40%',
+        height: '60%',
         marginTop: 30,
     },
     itemDetailImage: {
@@ -120,7 +125,7 @@ const styles = StyleSheet.create({
     },
     itemDetailText: {
         fontSize: 18,
-        marginTop: 55,
+        marginTop: 30,
     },
     itemDetailTextMoney: {
         fontSize: 25,
@@ -132,6 +137,68 @@ const styles = StyleSheet.create({
     itemDetailBuy: {
         fontSize: 30,
         marginTop: 75,
+    },
+    stackstyles:{
+        flex: 1,
+        backgroundColor: colors.background3,
+    },
+    stackCart:{
+        backgroundColor: colors.background4,
+    },
+    cartText:{
+        marginTop: 25,
+        fontFamily:'PoppinsBold',
+    },
+    tabBar: {
+        backgroundColor: colors.background2,
+        shadowColor: colors.background1,
+        elevation: 6,
+        position: 'absolute',
+        bottom: 25,
+        left: 20,
+        right: 20,
+        borderRadius: 15,
+        height: 90,
+    },
+    tabContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    orderItemContainer: {
+        flex: 1,
+        height: 100,
+        backgroundColor: colors.background4,
+        padding: 10,
+        margin: 10,
+        borderWidth: 2,
+        borderRadius: 10,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+    orderItemTextContainer: {
+        width: '70%',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
+        padding: 5,
+    },
+    orderItemText: {
+        fontFamily:'PoppinsRegular',
+        fontSize: 17,
+        marginTop: 17,
+    },
+    orderItemText1: {
+        fontFamily:'PoppinsBold',
+        fontSize: 17,
+        marginTop: 17,
+    },
+    cartImagesContainer:{
+        flex: 1,
+    },
+    cartImages:{
+        flex: 1,
+        width: '100%',
+        height: '100%',
     },
 });
 

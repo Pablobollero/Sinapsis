@@ -1,6 +1,9 @@
 import { useFonts } from 'expo-font';
 import fonts from './src/global/fonts';
-import Navigator from './src/navigation/Navigator';
+import { SafeAreaView } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import styles from './Styles';
+import TabNavigator from './src/navigation/TabNavigator';
 
 export default function App() {
 
@@ -10,13 +13,12 @@ export default function App() {
     return null
   }
   return (
-    <Navigator />
+    <TabNavigator  style={styles.appContainer}>
+      <SafeAreaView>
+        <StatusBar style='auto' />
+      </SafeAreaView>
+    </TabNavigator>
   );
 }
 
 
-{/* <SafeAreaView style={styles.appContainer}>
-      <StatusBar style='auto' />
-      {productDetailId ? (<ItemDetail productDetailId={productDetailId} setProductDetailId={setProductDetailId} />) : categorySelected ? (<ItemListCategories setCategorySelected={setCategorySelected} category={categorySelected} setProductDetailId={setProductDetailId} />) : (
-        <Home setCategorySelected={setCategorySelected} />)}
-    </SafeAreaView> */}
