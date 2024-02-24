@@ -6,9 +6,9 @@ import Card from './Card';
 const CategoryItem = ({category, navigation}) => {
     return (
         <>
-        <Card style={{ padding: 2.5 }}>
+        <Card style={styles.categoryItemContainer}>
             <Pressable onPress={() => navigation.navigate('ItemListCategories', {category})}>
-            <Text style={styles.categoryItemText}>{category}</Text>
+            <Text>{category}</Text>
             </Pressable>
         </Card>
         </>

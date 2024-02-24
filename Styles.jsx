@@ -10,6 +10,8 @@ const styles = StyleSheet.create({
     homeContainer: {
     flex: 1,
     width: '100%',
+    height: '80%',
+    backgroundColor: colors.background3,
     },
     itemListCategoriesContainer: {
         flex: 1,
@@ -27,9 +29,15 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     categoriesContainer: {
-        flex: 1,
+        height: '85%',
         padding: 45,
         backgroundColor: colors.background3,
+    },
+    categoryItemContainer:{
+        borderRadius: 5,
+        padding: 10,
+        alignItems: 'center',
+        marginTop: 12,
     },
     cardContainer: {
         width: '65%',
@@ -129,14 +137,14 @@ const styles = StyleSheet.create({
     },
     itemDetailTextMoney: {
         fontSize: 25,
-        marginTop: 55,
+        marginTop: 30,
     },
     itemDetailPressable: {
         alignItems: 'center',
     },
     itemDetailBuy: {
         fontSize: 30,
-        marginTop: 75,
+        marginTop: 25,
     },
     stackstyles:{
         flex: 1,
@@ -147,6 +155,7 @@ const styles = StyleSheet.create({
     },
     cartText:{
         marginTop: 25,
+        marginLeft: 12,
         fontFamily:'PoppinsBold',
     },
     tabBar: {
@@ -185,7 +194,7 @@ const styles = StyleSheet.create({
     orderItemText: {
         fontFamily:'PoppinsRegular',
         fontSize: 17,
-        marginTop: 17,
+        marginTop: 5,
     },
     orderItemText1: {
         fontFamily:'PoppinsBold',
