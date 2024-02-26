@@ -130,8 +130,8 @@ const styles = StyleSheet.create({
         fontSize: 25,
     },
     itemDetailImageContainer: {
-        width: '85%',
-        height: '60%',
+        width: '40%',
+        height: '40%',
         marginTop: 30,
     },
     itemDetailImage: {
@@ -146,12 +146,24 @@ const styles = StyleSheet.create({
         fontSize: 25,
         marginTop: 30,
     },
-    itemDetailPressable: {
+    itemDetailContainer1: {
         alignItems: 'center',
     },
-    itemDetailBuy: {
-        fontSize: 30,
-        marginTop: 25,
+    button: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: 12,
+        paddingHorizontal: 20,
+        borderRadius: 10,
+        elevation: 10,
+        backgroundColor: colors.background2,
+    },
+    itemDetailComprar: {
+        fontSize: 15,
+        lineHeight: 21,
+        fontWeight: 'bold',
+        letterSpacing: 0.25,
+        color: colors.buttons2,
     },
     stackstyles:{
         flex: 1,

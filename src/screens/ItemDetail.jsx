@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import allProducts from '../data/products.json';
 import styles from "../../Styles";
 import { AntDesign } from '@expo/vector-icons';
+import Counter from '../components/Counter';
+
 
 const ItemDetail = ({ navigation, route}) => {
     const [product, setProduct] = useState(null);
@@ -31,11 +33,15 @@ const ItemDetail = ({ navigation, route}) => {
                     <View>
                     <Text style={styles.itemDetailText}>{product.description}</Text>
                     <Text style={styles.itemDetailTextMoney}>{'$' + product.price}</Text>
-                    <Pressable style={styles.itemDetailPressable}>
-                        <Text style={styles.itemDetailBuy}>
-                            Comprar
+                    <View style={styles.itemDetailContainer1}>
+                    <Counter/>
+                    <Pressable style={styles.button}>
+                        <Text style={styles.itemDetailComprar}>
+                            COMPRAR
                         </Text>
                     </Pressable>
+                    </View>
+                    
                     </View>
                 </View>)
                 : <Text><Text>Cargando...</Text></Text>}

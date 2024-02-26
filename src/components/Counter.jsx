@@ -1,8 +1,8 @@
 import { StyleSheet, View, Text, Pressable } from 'react-native';
 import React from 'react';
-import { increment, decrement, incrementByAmount, reset } from '../features/counter/counterSlice';
+import { increment, decrement } from '../features/counter/counterSlice';
 import { useDispatch, useSelector } from 'react-redux';
-
+import colors from '../global/colors';
 
 const Counter = () => {
     const count = useSelector((state) => state.counterReducer.value);
@@ -14,9 +14,9 @@ const Counter = () => {
                 <Pressable onPress={()=> dispatch(decrement())} style={styles.button}>
                     <Text style={styles.buttonText}>-</Text>
                 </Pressable>
-                <Text>{count}</Text>
+                <Text style={styles.span}>{count}</Text>
                 <Pressable onPress={()=> dispatch(increment())} style={styles.button}>
-                    <Text style={styles.buttonText1}>+</Text>
+                    <Text style={styles.buttonText}>+</Text>
                 </Pressable>
             </View>
         </View>
@@ -31,23 +31,23 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
-        padding: 10,
+        marginTop: 10,
     },
     buttonsContainer: {
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        width: '100%',
-        marginBottom: 10,
+        width: '50%',
+        marginBottom: 5,
     },
     button: {
-        padding: 10,
-        backgroundColor: 'lightgray',
+        padding: 8,
+        backgroundColor: colors.background2,
         borderRadius: 19,
     },
     span: {
-        width: '43%',
-        padding: 10,
+        width: '20%',
+        padding: 5,
         textAlign: 'center',
         fontSize: 20,
         fontFamily: 'PoppinsRegular',
@@ -62,11 +62,6 @@ const styles = StyleSheet.create({
     buttonText: {
         fontSize: 18,
         fontFamily: 'PoppinsBold',
-        color: 'red',
-    },
-    buttonText1: {
-        fontSize: 18,
-        fontFamily: 'PoppinsBold',
-        color: 'green',
+        color: colors.background3,
     },
 })
