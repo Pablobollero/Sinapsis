@@ -1,27 +1,28 @@
-import { FlatList, View } from "react-native";
+import { FlatList, View, Pressable, Text } from "react-native";
 import styles from "../../Styles";
-import allProducts from '../data/products.json';
 import ProductItem from "../components/ProductItem";
 import Search from "../components/Search";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { AntDesign } from '@expo/vector-icons';
 
-const ItemListCategories = ({navigation, route}) => {
+const ItemListCategories = ({navigation}) => {
+    const productsFilteredByCategory = useSelector((state) => state.shopReducer.value.productsFilteredByCategory);
     const [products, setProducts] = useState([]);
     const [keyword, setKeyword] = useState('');
 
-    const {category} = route.params;
     
     useEffect(() => {
-        if(category) {
-            const products = allProducts.filter((product) => product.category === category)
-            const filteredProducts = products.filter((product) => product.title.includes(keyword)
-            );
-            setProducts(filteredProducts)
-        }
-    }, [category, keyword])
+        const productsFiltered = productsFilteredByCategory.filter((product)=> product.title.includes(keyword))
+        setProducts(productsFiltered)
+    }, [productsFilteredByCategory, keyword]);
     
     return (
         <View style={styles.itemContainer}>
+            <Pressable onPress={() => navigation.goBack()} style={styles.backButton} >
+                <AntDesign name="back" size={12} color="black" />
+                <Text style={styles.backButtonText}>Volver</Text>
+            </Pressable>
             <Search onSearch={setKeyword} />
             <FlatList 
             data={products}

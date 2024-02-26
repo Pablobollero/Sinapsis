@@ -27,7 +27,7 @@ const ProductItem = ({ product, navigation }) => {
     return (
         <View style={styles.productItemContainer}>
             <Card style={styles.productItem}>
-                <Pressable onPress={()=> navigation.navigate("ItemDetail", {id: product.id})}>
+                <Pressable style={styles.productItemPressable} onPress={()=> navigation.navigate("ItemDetail", {id: product.id})}>
                     <Text style={width > 400 ? styles.productItemText0 : styles.productItemText1}>{product.title}</Text>
                     <Image style={styles.productItemImage} resizeMode='cover' source={{ uri: product.thumbnail }} />
                 </Pressable>

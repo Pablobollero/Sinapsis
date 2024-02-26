@@ -8,10 +8,9 @@ const styles = StyleSheet.create({
         width: '100%',
     },
     homeContainer: {
-    flex: 1,
-    width: '100%',
-    height: '80%',
-    backgroundColor: colors.background3,
+        flex: 1,
+        width: '100%',
+        backgroundColor: colors.background3,
     },
     itemListCategoriesContainer: {
         flex: 1,
@@ -29,11 +28,14 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     categoriesContainer: {
-        height: '85%',
+        height: '90.5%',
         padding: 45,
         backgroundColor: colors.background3,
     },
-    categoryItemContainer:{
+    test:{
+        backgroundColor: 'red',
+    },
+    categoryItemCard:{
         borderRadius: 5,
         padding: 10,
         alignItems: 'center',
@@ -57,20 +59,23 @@ const styles = StyleSheet.create({
     },
     itemContainer: {
         flex: 1,
+        paddingBottom: 100,
         width: '100%',
-        padding: 5,
         backgroundColor: colors.background3,
     },
     productItemContainer: {
         flex:1,
-        marginBottom: 35,
         height: 250,
-        paddingTop:25,
-        paddingBottom:25,
+        backgroundColor: colors.background3,
     },
     productItem: {
         width: '75%',
         height: '85%',
+        borderRadius: 5,
+    },
+    productItemPressable: {
+        flex:1,
+        paddingBottom: 25,
     },
     productItemText0: {
         fontSize: 18,
@@ -85,6 +90,7 @@ const styles = StyleSheet.create({
     productItemImage: {
         width: '100%',
         height: '100%',
+        borderRadius: 5,
     },
     imput: {
         borderRadius: 8,
@@ -100,12 +106,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 25,
     },
-    itemListCategoriesBackButton: {
+    backButton: {
         flexDirection: 'row',
         alignItems: 'center',
         marginBottom: 10,
         marginTop: 10,
         gap: 8,
+        marginLeft: 8,
     },
     backButtonText: {
         fontSize: 14,

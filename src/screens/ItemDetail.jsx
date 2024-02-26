@@ -2,8 +2,9 @@ import { View, Text, Pressable, Image } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import allProducts from '../data/products.json';
 import styles from "../../Styles";
+import { AntDesign } from '@expo/vector-icons';
 
-const ItemDetail = ({navigation, route}) => {
+const ItemDetail = ({ navigation, route}) => {
     const [product, setProduct] = useState(null);
     
     const {id} = route.params;
@@ -15,6 +16,10 @@ const ItemDetail = ({navigation, route}) => {
 
     return (
         <View style={styles.itemContainer}>
+            <Pressable onPress={() => navigation.goBack()} style={styles.backButton} >
+                <AntDesign name="back" size={12} color="black" />
+                <Text style={styles.backButtonText}>Volver</Text>
+            </Pressable>
             {product ? (
                 <View style={styles.itemDetail}>
                     <View style={styles.itemDetailTitleContainer}>
@@ -32,7 +37,6 @@ const ItemDetail = ({navigation, route}) => {
                         </Text>
                     </Pressable>
                     </View>
-
                 </View>)
                 : <Text><Text>Cargando...</Text></Text>}
         </View>
