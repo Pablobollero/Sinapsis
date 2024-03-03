@@ -1,13 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
-import allProducts from '../../data/products.json';
-import allCategories from '../../data/categories.json';
+import allProducts from '../../data/products.json';//Remover y modificar logica
+import allCategories from '../../data/categories.json';//Remover y modificar logica
 
 export const shopSlice = createSlice({
     name: 'shopo',
     initialState: {
         value: {
-            products: allProducts,
-            categories: allCategories,
+            products: allProducts,//remover y acomodar logica
+            categories: allCategories,//remover y acomodar logica
             categorySelected: '',
             productIdSelected: null,
             productsFilteredByCategory: [],

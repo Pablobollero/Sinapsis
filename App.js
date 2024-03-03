@@ -6,6 +6,7 @@ import styles from './Styles';
 import TabNavigator from './src/navigation/TabNavigator';
 import { Provider } from 'react-redux';
 import store from './src/store/indexx';
+import MainNavigator from './src/navigation/MainNavigator';
 
 export default function App() {
 
@@ -16,11 +17,11 @@ export default function App() {
   }
   return (
     <Provider store={store}>
-      <TabNavigator style={styles.appContainer}>
+      <StatusBar style='auto' />
+      <MainNavigator>
         <SafeAreaView>
-          <StatusBar style='auto' />
         </SafeAreaView>
-      </TabNavigator>
+      </MainNavigator>
     </Provider>
   );
 }

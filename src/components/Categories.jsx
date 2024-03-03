@@ -2,17 +2,19 @@ import { View, FlatList } from 'react-native'
 import React from 'react'
 import styles from '../../Styles';
 import CategoryItem from './CategoryItem';
-import { useSelector } from 'react-redux';
+import { useGetCategoriesQuery } from '../services/shopService';
 
 const Categories = ({navigation}) => {
-    const categories = useSelector(state => state.shopReducer.value.categories);
-
+    
+    //En el sig Hook  vamos a traer las categorias. Data, trae la info, isLoading es para aplicar el Loading, el efecto de carga, y error para capturar el error y mostrar un mensaje de error al usuario...Hacer isLoading y error para el fetching
+    const { data, isLoading, error} = useGetCategoriesQuery();
+    
     return (
         <View style={styles.categoriesContainer}>
             <FlatList
-            data={categories}
-            renderItem={({item}) => <CategoryItem navigation={navigation} category={item}/>}
-            keyExtractor={category => category}
+            data={data}
+            renderItem={({item}) => (<CategoryItem navigation={navigation} category={item}/>)}
+            keyExtractor={(category) => category}
             />
         </View>
     );

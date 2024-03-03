@@ -4,16 +4,27 @@ import allProducts from '../data/products.json';
 import styles from "../../Styles";
 import { AntDesign } from '@expo/vector-icons';
 import Counter from '../components/Counter';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../features/shop/cartSlice';
 
 
 const ItemDetail = ({ navigation, route}) => {
     const [product, setProduct] = useState(null);
     
-    const {id} = route.params;
+    //reemplazar por una funcion parecida a getProductsByCategory (Linea 11) de shopService.js
+    //que obtenga un item por Id
+    const {id} = route.params; 
+
+    //Logica para dar la funcionalidad al boton que agrega el producto al carrito
+    const dispatch = useDispatch()
+    const onAddCart = () => {
+        //En lugar de quantity iria el contador para agregar la cantidad requerida, ahora esta hardcodeado con una cantidad de 1.
+        dispatch(addItem({...product, quantity: 1}))
+    }
 
     useEffect(() => {
         const productFinded = allProducts.find((product) => product.id === id);
-        setProduct(productFinded)
+        setProduct(productFinded);
     }, [id]);
 
     return (
@@ -22,11 +33,12 @@ const ItemDetail = ({ navigation, route}) => {
                 <AntDesign name="back" size={12} color="black" />
                 <Text style={styles.backButtonText}>Volver</Text>
             </Pressable>
-            {product ? (
+            {product ? 
                 <View style={styles.itemDetail}>
                     <View style={styles.itemDetailTitleContainer}>
                         <Text style={styles.itemDetailTitle}>{product.title}</Text>
-                    </View>
+                    </View
+                    >
                     <View style={styles.itemDetailImageContainer}>
                     <Image style={styles.itemDetailImage} resizeMode='cover' source={{ uri: product.images[0] }} />
                     </View>
@@ -35,15 +47,15 @@ const ItemDetail = ({ navigation, route}) => {
                     <Text style={styles.itemDetailTextMoney}>{'$' + product.price}</Text>
                     <View style={styles.itemDetailContainer1}>
                     <Counter/>
-                    <Pressable style={styles.button}>
+                    <Pressable style={styles.button} onPress={onAddCart}>
                         <Text style={styles.itemDetailComprar}>
-                            COMPRAR
+                            AGREGAR
                         </Text>
                     </Pressable>
                     </View>
                     
                     </View>
-                </View>)
+                </View>
                 : <Text><Text>Cargando...</Text></Text>}
         </View>
     );

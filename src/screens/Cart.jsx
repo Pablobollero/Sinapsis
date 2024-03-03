@@ -1,29 +1,34 @@
-import { View, Text, FlatList } from 'react-native'
-import allCartItems from '../data/cart.json';
-import { useEffect, useState } from 'react';
-import CartItem from '../components/CartItem';
-import styles from '../../Styles';
+import { FlatList, Pressable, Text, View } from "react-native";
+import styles from "../../Styles";
+import CartItem from "../components/CartItem";
+import { usePostOrderMutation } from '../services/shopService';
+import { useSelector } from "react-redux";
+
 
 const Cart = () => {
-    const [cartItems, setCartItems] = useState([]);
-    const [total, setTotal] = useState(0); 
-    
-    useEffect(() => {
-        const total = allCartItems.reduce((accumulated, currentItem) => accumulated += (currentItem.quantity * currentItem.price), 0);
-        setCartItems(allCartItems);
-        setTotal(total);
-    }, []);
+
+    const cartItems = useSelector((state) => state.cartReducer.value.items);
+    const total = useSelector((state) => state.cartReducer.value.total);
+    const [triggerPost, result] = usePostOrderMutation()
+    const confirmCart = () => {triggerPost({total, cartItems, user: 'loggedUser'})}
 
     return (
         <View style={styles.stackstyles}>
+            {cartItems.length > 0 ? (
             <View>
                 <FlatList
                     data={cartItems}
-                    keyExtractor={(cartItem) => cartItem.id}
-                    renderItem={({ item }) => <CartItem item={item} />} />
+                    renderItem={({ item }) => <CartItem item={item} />} 
+                    keyExtractor={(cartItem) => cartItem.id.toString()} 
+                    />
                 <Text style={styles.cartText}>Total: $ {total}</Text>
-            </View>
-        </View>
+                <Pressable onPress={confirmCart}>
+                    <Text>Confirm</Text>
+                </Pressable>
+            </View>) : (
+        <Text>No hay productos agregados</Text>
+    )}
+    </View>
     );
 };
 
