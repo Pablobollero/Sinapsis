@@ -4,8 +4,9 @@ import ShopStack from "./ShopStack";
 import CartStack from "./CartStack";
 import OrdersStack from './OrdersStack';
 import styles from "../../Styles";
-import { Entypo, FontAwesome, Ionicons } from '@expo/vector-icons';
+import { Entypo, FontAwesome, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import colors from "../global/colors";
+import MyProfileStack from './MyProfileStack';
 
 
 const TabNavigator = () => {
@@ -29,7 +30,7 @@ const TabNavigator = () => {
                     return (
                         <View style={styles.tabContainer}>
                             <FontAwesome name="opencart" size={30} color={focused ? colors.buttons2 : colors.buttons1} />
-                            <Text style={{ color: focused ? 'white' : 'grey' }} >Cart</Text>
+                            <Text style={{ color: focused ? 'white' : 'grey' }} >Carrito</Text>
                         </View>
                     )
                 }
@@ -39,7 +40,17 @@ const TabNavigator = () => {
                     return (
                         <View style={styles.tabContainer}>
                             <Ionicons name="receipt" size={30} color={focused ? colors.buttons2 : colors.buttons1} />
-                            <Text style={{ color: focused ? 'white' : 'grey' }} >Orders</Text>
+                            <Text style={{ color: focused ? 'white' : 'grey' }} >Ordenes</Text>
+                        </View>
+                    )
+                }
+            }} />
+            <Tab.Screen name="MyProfileStack" component={MyProfileStack} options={{
+                tabBarIcon: ({ focused }) => {
+                    return (
+                        <View style={styles.tabContainer}>
+                            <MaterialCommunityIcons name="alien" size={30} color={focused ? colors.buttons2 : colors.buttons1} />
+                            <Text style={{ color: focused ? 'white' : 'grey' }} >Mi Perfil</Text>
                         </View>
                     )
                 }
