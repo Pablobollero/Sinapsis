@@ -4,11 +4,11 @@ import colors from '../global/colors';
 import *as ImagePicker from 'expo-image-picker';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCameraImage } from '../features/authSlice';
-import {usePostProfileImageMutation} from '../services/shopService';
+import { usePostProfileImageMutation } from '../services/shopService';
 
 const ImageSelector = ({navigation}) => {
     const [image,setImage] = useState(null);
-    const {localId} = useSelector(state => state.authReducer.value);
+    const { localId } = useSelector(state => state.authReducer.value);
     const [triggerSaveProfileImage, result] = usePostProfileImageMutation();
     const dispatch = useDispatch();
 
@@ -38,8 +38,8 @@ const ImageSelector = ({navigation}) => {
 
     const confirmImage = () => {
         dispatch(setCameraImage(image))
-        triggerSaveProfileImage({localId, image});
-        navigation.goBack()
+        triggerSaveProfileImage({image, localId})
+        navigation.goBack();
     }
 
     return (

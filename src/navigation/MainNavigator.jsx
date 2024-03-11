@@ -15,7 +15,7 @@ const MainNavigator = () => {
         if(data){
             dispatch(setProfileImage(data.image))
         }
-    }, [data]);
+    }, [data])
 
     return (
         <NavigationContainer>{user ? <TabNavigator /> : <AuthStack />}</NavigationContainer>

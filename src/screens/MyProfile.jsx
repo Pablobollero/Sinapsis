@@ -16,6 +16,9 @@ const MyProfile = ({navigation}) => {
             <Pressable style={styles.button} onPress={() => navigation.navigate('Image Selector')}>
                 {image? (<Text style={styles.text}>Cambiar Foto de Perfil</Text>) : (<Text style={styles.text}>Agregar Foto de Perfil</Text>) }
             </Pressable>
+            <Pressable style={styles.button} onPress={() => navigation.navigate('Location Selector')}>
+                <Text style={styles.text}>Mi direccion</Text>
+            </Pressable>
         </View>
     );
 };
