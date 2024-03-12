@@ -1,11 +1,20 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Pressable } from 'react-native'
 import React, { useEffect, useState } from 'react'
-import *as Location from 'expo-location';
+import * as Location from 'expo-location';
 import MapPreview from '../components/MapPreview';
+import { googleAPI } from '../firebase/googleAPI';
+import colors from '../global/colors';
+import { useDispatch, useSelector } from 'react-redux';
+import { setUserLocation } from '../features/authSlice';
+import { usePostUserLocationMutation } from '../services/shopService';
 
 const LocationSelector = () => {
     const [location, setLocation] = useState({ latitude: "", longitude: "" });
-    const [error, setError] = useState("");
+    const [error, setError] = useState(null);
+    const [address, setAddress] = useState(null);
+    const { localId } = useSelector((state) => state.authReducer.value);
+    const [triggerPostAddress, result] = usePostUserLocationMutation();
+    const dispatch = useDispatch();
 
     useEffect(() => {
         (async () => {
@@ -20,7 +29,33 @@ const LocationSelector = () => {
                 longitude: location.coords.longitude
             })
         })()
-    }, [])
+    }, []);
+
+    useEffect(() => {
+        (async () => {
+            try {
+                if (location.latitude) {
+                    const url_reverse_geocode = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${location.latitude},${location.longitude}&key=${googleAPI.mapStatic}`
+                    const response = await fetch(url_reverse_geocode);
+                    const data = await response.json();
+                    setAddress(data.results[0].formatted_address);
+                }
+            } catch (err) {
+
+            }
+        })()
+    }, [location]);
+
+    const onConfirmAddress = () => {
+        const locationFormatted = {
+            latitude: location.latitude,
+            longitude: location.longitude,
+            address: address, 
+        };
+        dispatch(setUserLocation(locationFormatted));
+
+        triggerPostAddress({localId, location: locationFormatted});
+    };
 
     return (
         <View style={styles.container}>
@@ -30,6 +65,10 @@ const LocationSelector = () => {
                     <View style={styles.noLocationContainer}>
                         <Text style={styles.text}>Latitud:</Text><Text style={styles.text1}>{location.latitude}</Text>
                         <Text style={styles.text}>Longitud:</Text><Text style={styles.text1}>{location.longitude}</Text>
+                        <Text style={styles.text2}>{address}</Text>
+                        <Pressable style={styles.button} onPress={onConfirmAddress}>
+                            <Text style={styles.text}>Confirmar direccion</Text>
+                        </Pressable>
                         <MapPreview location={location} />
                     </View>
                 </View>) : (<Text>{error}</Text>)}
@@ -62,10 +101,12 @@ const styles = StyleSheet.create({
     button: {
         width: '80%',
         elevation: 10,
-        backgroundColor: 'white',
+        backgroundColor: colors.buttons2,
         justifyContent: 'center',
         alignItems: 'center',
-        padding: 15,
+        padding: 8,
+        margin: 6,
+        borderRadius: 20,
     },
     text: {
         fontFamily: 'PoppinsBold',
@@ -77,4 +118,9 @@ const styles = StyleSheet.create({
         fontSize: 15,
         color: 'black',
     },
+    text2: {
+        color: colors.buttons1,
+        fontSize: 18,
+    },
+
 })
