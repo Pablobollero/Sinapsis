@@ -8,6 +8,9 @@ const MyProfile = ({navigation}) => {
 
     return (
         <View style={styles.container}>
+            <View style={styles.paragraphContainer}>
+            <Text style={styles.paragraph}>En esta seccion podras agregar o modificar tu Foto de Perfil como asi tambien constatar y confirmar tu Direccion.</Text>
+            </View>
             {profileImage || imageCamera ? (
                 <Image
                     source={{ uri: profileImage || imageCamera }}
@@ -20,10 +23,10 @@ const MyProfile = ({navigation}) => {
                 </>
             )}
             <Pressable style={styles.button} onPress={() => navigation.navigate('Image Selector')}>
-                {profileImage ? (<Text style={styles.text}>Cambiar Foto de Perfil</Text>) : (<Text style={styles.text}>Agregar Foto de Perfil</Text>)}
+                {profileImage ? (<Text style={styles.buttonText}>Cambiar Foto de Perfil</Text>) : (<Text style={styles.buttonText}>Agregar Foto de Perfil</Text>)}
             </Pressable>
             <Pressable style={styles.button} onPress={() => navigation.navigate('My Address')}>
-                <Text style={styles.text}>Mi direccion</Text>
+                <Text style={styles.buttonText}>Mi direccion</Text>
             </Pressable>
         </View>
     );
@@ -33,12 +36,11 @@ export default MyProfile;
 
 const styles = StyleSheet.create ({
     container: {
-        backgroundColor:'white',
-        paddingTop: 30,
-        gap: 30,
-        justifyContent: 'flex-start',
-        alignItems: 'center',
         flex: 1,
+        backgroundColor: 'white',
+        alignItems: 'center',
+        gap: 35,
+        paddingTop: 30,
     },
     imageProfile: {
         width: '60%',
@@ -62,34 +64,17 @@ const styles = StyleSheet.create ({
             height: 12,
         }
     },
-    text: {
+    buttonText: {
         fontFamily: 'PoppinsBold',
     },
+    paragraphContainer: {
+        paddingVertical: 10,
+        paddingHorizontal: 25,
+    },
+    paragraph: {        
+        fontFamily: 'PoppinsRegular',
+        fontSize: 15,
+        textAlign: 'center',
+        letterSpacing: 1.5,
+        },
 });
-
-
-
-// import { View, Image, StyleSheet, Pressable, Text } from 'react-native';
-// import React from 'react';
-// import colors from '../global/colors';
-// import { useSelector } from 'react-redux';
-
-// const MyProfile = ({navigation}) => {
-//     const image = useSelector((state) => state.authReducer.value.imageCamera)
-
-//     return (
-//         <View style={styles.container}>
-//             {image? (<Image source={{uri: image}} resizeMode='cover' style={styles.imageProfile} />
-//             ) 
-//             :  
-//             (<><Image source={require('../../assets/alien.png')} style={styles.imageProfile} resizeMode='cover'/> 
-//             </>)}
-//             <Pressable style={styles.button} onPress={() => navigation.navigate('Image Selector')}>
-//                 {image? (<Text style={styles.text}>Cambiar Foto de Perfil</Text>) : (<Text style={styles.text}>Agregar Foto de Perfil</Text>) }
-//             </Pressable>
-//             <Pressable style={styles.button} onPress={() => navigation.navigate('Location Selector')}>
-//                 <Text style={styles.text}>Mi direccion</Text>
-//             </Pressable>
-//         </View>
-//     );
-// };

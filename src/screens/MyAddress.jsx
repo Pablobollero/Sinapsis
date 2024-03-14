@@ -43,7 +43,7 @@ const MyAddress = ({navigation}) => {
     return (
         <View style={style.container}>
             <Text style={style.textTitle}>Tu direccion confirmada.</Text>
-            <Text style={style.textParagraph}>Para obtener mas informacion acerca de la siguiente direccion, por favor haga click sobre ella.</Text>
+            <Text style={style.paragraph}>Para obtener mas informacion acerca de la siguiente direccion, por favor haga click sobre ella.</Text>
             <Pressable onPress={() => navigation.navigate('Location Selector')}>
                 <Card style={style.cardContainer}>
                     <Text>{address}</Text>
@@ -70,21 +70,29 @@ const style = StyleSheet.create ({
         fontSize: 20,
         textAlign: 'center',
     },
-    textParagraph: {        
+    paragraph: {        
     fontFamily: 'PoppinsRegular',
     fontSize: 15,
     textAlign: 'center',
-},
+    letterSpacing: 1.5,
+    },
     cardContainer: {
+        flexDirection: 'row',
+        width: 'fit-content',
+        gap: 8,
+        borderWidth: 0.25,
+        borderColor: colors.buttons1,
+        borderRadius: 6,
         backgroundColor: colors.buttons2,
-        width:'fit-content',
-        height: '30%',
-        paddingLeft: 25,
-        paddingRight: 25,
         justifyContent: 'center',
         alignItems: 'center',
-        flexDirection: 'row',
-        borderRadius: 15,
-        gap: 15,
+        padding: 10,
+        shadowOpacity: 0.58,
+        shadowRadius: 16.00,
+        elevation: 18,
+        shadowOffset: {
+            width: 0,
+            height: 12,
+        }
     },
 })

@@ -59,7 +59,8 @@ const LocationSelector = () => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.textTitle}>Mi direccion</Text>
+            <Text style={styles.paragraph}>Aqui podras constatar y confirmar tu ubicacion en tiempo real.</Text>
+            <Text style={styles.textTitle}>Coordenadas Obtenidas</Text>
             {location.latitude ? (
                 <View style={styles.noLocationContainer}>
                     <View style={styles.locationContainer} >
@@ -87,11 +88,13 @@ export default LocationSelector;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: 'white',
         alignItems: 'center',
-        justifyContent: 'center',
-        gap: 20,
-        paddingBottom: 130,
-        paddingTop: 40,
+        gap: 15,
+        paddingBottom: 13,
+        paddingLeft: 13,
+        paddingRight: 13,
+        paddingTop: 30,
     },
     location: {
         flexDirection: 'row',
@@ -115,12 +118,21 @@ const styles = StyleSheet.create({
     button: {
         width: '80%',
         elevation: 10,
-        backgroundColor: colors.buttons2,
         justifyContent: 'center',
         alignItems: 'center',
-        padding: 8,
+        padding: 10,
+        backgroundColor: colors.buttons2,
+        borderColor: colors.buttons1,
         margin: 6,
-        borderRadius: 20,
+        borderRadius: 6,
+        borderWidth: 0.25,
+        shadowOpacity: 0.58,
+        shadowRadius: 16.00,
+        elevation: 18,
+        shadowOffset: {
+            width: 0,
+            height: 12,
+        }
     },
     text: {
         fontFamily: 'PoppinsBold',
@@ -136,5 +148,10 @@ const styles = StyleSheet.create({
         color: colors.buttons1,
         fontSize: 18,
     },
-
+    paragraph: {
+        fontFamily: 'PoppinsRegular',
+        fontSize: 15,
+        textAlign: 'center',
+        letterSpacing: 1.5,
+    },
 })
