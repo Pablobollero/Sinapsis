@@ -31,7 +31,6 @@ const Signup = ({navigation}) => {
         try {
             signupSchema.validateSync({ email, password, confirmPassword })
             triggerSignUp({ email, password, confirmPassword });
-            console.log('Registro exitoso');
         } catch (err) {
             console.log('Catch error');
             console.log(err.path);

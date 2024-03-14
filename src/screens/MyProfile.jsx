@@ -4,19 +4,25 @@ import colors from '../global/colors';
 import { useSelector } from 'react-redux';
 
 const MyProfile = ({navigation}) => {
-    const image = useSelector((state) => state.authReducer.value.imageCamera)
+    const { profileImage, imageCamera } = useSelector((state) => state.authReducer.value);
 
     return (
         <View style={styles.container}>
-            {image? (<Image source={{uri: image}} resizeMode='cover' style={styles.imageProfile} />
-            ) 
-            :  
-            (<><Image source={require('../../assets/alien.png')} style={styles.imageProfile} resizeMode='cover'/> 
-            </>)}
+            {profileImage || imageCamera ? (
+                <Image
+                    source={{ uri: profileImage || imageCamera }}
+                    resizeMode="cover"
+                    style={styles.imageProfile}
+                />
+            ) : (
+                <>
+                    <Image source={require('../../assets/alien.png')} style={styles.imageProfile} resizeMode='cover' />
+                </>
+            )}
             <Pressable style={styles.button} onPress={() => navigation.navigate('Image Selector')}>
-                {image? (<Text style={styles.text}>Cambiar Foto de Perfil</Text>) : (<Text style={styles.text}>Agregar Foto de Perfil</Text>) }
+                {profileImage ? (<Text style={styles.text}>Cambiar Foto de Perfil</Text>) : (<Text style={styles.text}>Agregar Foto de Perfil</Text>)}
             </Pressable>
-            <Pressable style={styles.button} onPress={() => navigation.navigate('Location Selector')}>
+            <Pressable style={styles.button} onPress={() => navigation.navigate('My Address')}>
                 <Text style={styles.text}>Mi direccion</Text>
             </Pressable>
         </View>
@@ -50,3 +56,30 @@ const styles = StyleSheet.create ({
         fontFamily: 'PoppinsBold',
     },
 });
+
+
+
+// import { View, Image, StyleSheet, Pressable, Text } from 'react-native';
+// import React from 'react';
+// import colors from '../global/colors';
+// import { useSelector } from 'react-redux';
+
+// const MyProfile = ({navigation}) => {
+//     const image = useSelector((state) => state.authReducer.value.imageCamera)
+
+//     return (
+//         <View style={styles.container}>
+//             {image? (<Image source={{uri: image}} resizeMode='cover' style={styles.imageProfile} />
+//             ) 
+//             :  
+//             (<><Image source={require('../../assets/alien.png')} style={styles.imageProfile} resizeMode='cover'/> 
+//             </>)}
+//             <Pressable style={styles.button} onPress={() => navigation.navigate('Image Selector')}>
+//                 {image? (<Text style={styles.text}>Cambiar Foto de Perfil</Text>) : (<Text style={styles.text}>Agregar Foto de Perfil</Text>) }
+//             </Pressable>
+//             <Pressable style={styles.button} onPress={() => navigation.navigate('Location Selector')}>
+//                 <Text style={styles.text}>Mi direccion</Text>
+//             </Pressable>
+//         </View>
+//     );
+// };

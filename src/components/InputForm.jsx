@@ -14,9 +14,7 @@ const InputForm = ({label, error, onChange, isSecure}) => {
         <View style={styles.inputContainer}>
             <Text style={styles.subtitle}>{label}</Text>
             <TextInput style={styles.input} value={input} onChangeText={onChangeText} secureTextEntry={isSecure} />
-            {error ? (
-                <Text style={styles.error} >{error}</Text>
-            ) : null}
+            {error ? (<Text style={styles.error} >{error}</Text>) : (null) }
         </View>
     );
 };
