@@ -228,6 +228,11 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
     },
+    imageProfile: {
+        width: 30,
+        height: 30,
+        borderRadius: 25,
+    },
 });
 
 export default styles;

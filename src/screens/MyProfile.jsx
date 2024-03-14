@@ -34,23 +34,33 @@ export default MyProfile;
 const styles = StyleSheet.create ({
     container: {
         backgroundColor:'white',
-        padding: 10,
-        gap: 15,
-        alignItems: 'center',
+        paddingTop: 30,
+        gap: 30,
         justifyContent: 'flex-start',
+        alignItems: 'center',
         flex: 1,
     },
     imageProfile: {
-        width: '50%',
-        height: '40%',
+        width: '60%',
+        height: '35%',
+        borderRadius: 125,
     },
     button: {
-        width: '60%',
-        elevation: 10,
+        width: '45%',
+        borderWidth: 0.25,
+        borderColor: colors.buttons1,
+        borderRadius: 6,
         backgroundColor: colors.buttons2,
         justifyContent: 'center',
         alignItems: 'center',
-        padding: 8,
+        padding: 10,
+        shadowOpacity: 0.58,
+        shadowRadius: 16.00,
+        elevation: 18,
+        shadowOffset: {
+            width: 0,
+            height: 12,
+        }
     },
     text: {
         fontFamily: 'PoppinsBold',

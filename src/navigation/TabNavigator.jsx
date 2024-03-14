@@ -1,4 +1,4 @@
-import { Text, View } from 'react-native';
+import { Text, View, Image } from 'react-native';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import ShopStack from "./ShopStack";
 import CartStack from "./CartStack";
@@ -7,10 +7,11 @@ import styles from "../../Styles";
 import { Entypo, FontAwesome, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import colors from "../global/colors";
 import MyProfileStack from './MyProfileStack';
+import { useSelector } from 'react-redux';
 
 
 const TabNavigator = () => {
-    
+    const { profileImage, imageCamera } = useSelector((state) => state.authReducer.value);
     const Tab = createBottomTabNavigator()
 
     return (
@@ -49,7 +50,17 @@ const TabNavigator = () => {
                 tabBarIcon: ({ focused }) => {
                     return (
                         <View style={styles.tabContainer}>
-                            <MaterialCommunityIcons name="alien" size={30} color={focused ? colors.buttons2 : colors.buttons1} />
+                            {profileImage || imageCamera ? (
+                                <Image
+                                    source={{ uri: profileImage || imageCamera }}
+                                    resizeMode="cover"
+                                    style={styles.imageProfile}
+                                />
+                            ) : (
+                                <>
+                                    <MaterialCommunityIcons name="alien" size={30} color={focused ? colors.buttons2 : colors.buttons1} />
+                                </>
+                            )}
                             <Text style={{ color: focused ? 'white' : 'grey' }} >Mi Perfil</Text>
                         </View>
                     )
@@ -60,3 +71,5 @@ const TabNavigator = () => {
 };
 
 export default TabNavigator;
+
+

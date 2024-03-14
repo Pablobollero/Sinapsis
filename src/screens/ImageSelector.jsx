@@ -51,12 +51,14 @@ const ImageSelector = ({navigation}) => {
                 <Pressable onPress={confirmImage}><Text>Todo listo!</Text></Pressable>
                 </>
             ):(
-                <View style={styles.noPhotoContainer}>
-                    <Text>Sin foto!</Text>
-                    <Pressable onPress={pickImage}>
-                        <Text>Que commience el Show!</Text>
-                    </Pressable>
-                </View>
+                <>  
+                    <Text>Presiona el siguiente boton para acceder a la camara de fotos.</Text>
+                    <View style={styles.noPhotoContainer}>
+                        <Pressable onPress={pickImage}>
+                            <Text>Que commience el Show!</Text>
+                        </Pressable>
+                    </View>
+                </>
             )}
         </View>
     );
@@ -67,21 +69,30 @@ export default ImageSelector;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: 'white',
         alignItems: 'center',
-        justifyContent: 'center',
-        gap: 20,
+        padding: '25%',
+        gap: 35,
     },
     image:{
         width: 200,
         height: 200,
     },
     noPhotoContainer:{
-        width: 200,
-        height: 200,
-        borderWidth: 2,
+        width: 'auto',
+        borderWidth: 0.25,
+        backgroundColor: colors.buttons2,
         borderColor: colors.buttons1,
+        borderRadius: 6,
         padding: 10,
         justifyContent: 'center',
         alignItems: 'center',
+        shadowOpacity: 0.58,
+        shadowRadius: 16.00,
+        elevation: 18,
+        shadowOffset: {
+            width: 0,
+            height: 12,
+        }
     },
 });
