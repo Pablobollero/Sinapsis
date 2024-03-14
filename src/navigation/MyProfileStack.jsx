@@ -11,7 +11,7 @@ const Stack = createNativeStackNavigator();
 const MyProfileStack = () => {
 
     return (
-        <Stack.Navigator initialRouteName='My Profile' screenOptions={{header: () => <Header title='My Profile'/> }}>
+        <Stack.Navigator initialRouteName='My Profile' screenOptions={{header: () => <Header title='Perfil y Direccion'/> }}>
             <Stack.Screen name='My Profile' component={MyProfile} />
             <Stack.Screen name='Image Selector' component={ImageSelector} />
             <Stack.Screen name='My Address' component={MyAddress} />

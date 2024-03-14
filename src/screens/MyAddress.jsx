@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import * as Location from 'expo-location';
 import { googleAPI } from '../firebase/googleAPI';
 import Card from '../components/Card';
+import colors from '../global/colors';
 
 const MyAddress = ({navigation}) => {
     const [location, setLocation] = useState({ latitude: "", longitude: "" });
@@ -75,6 +76,7 @@ const style = StyleSheet.create ({
     textAlign: 'center',
 },
     cardContainer: {
+        backgroundColor: colors.buttons2,
         width:'fit-content',
         height: '30%',
         paddingLeft: 25,

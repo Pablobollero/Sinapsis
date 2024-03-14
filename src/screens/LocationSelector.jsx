@@ -59,17 +59,23 @@ const LocationSelector = () => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.address}>Mi direccion</Text>
+            <Text style={styles.textTitle}>Mi direccion</Text>
             {location.latitude ? (
                 <View style={styles.noLocationContainer}>
+                    <View style={styles.locationContainer} >
+                        <View style={styles.location}>
+                            <Text style={styles.text}>Latitud:</Text><Text style={styles.text1}>{location.latitude}</Text>
+                        </View>
+                        <View style={styles.location}>
+                            <Text style={styles.text}>Longitud:</Text><Text style={styles.text1}>{location.longitude}</Text>
+                        </View>
+                    </View>
+                        <MapPreview location={location} />
                     <View style={styles.noLocationContainer}>
-                        <Text style={styles.text}>Latitud:</Text><Text style={styles.text1}>{location.latitude}</Text>
-                        <Text style={styles.text}>Longitud:</Text><Text style={styles.text1}>{location.longitude}</Text>
                         <Text style={styles.text2}>{address}</Text>
                         <Pressable style={styles.button} onPress={onConfirmAddress}>
                             <Text style={styles.text}>Confirmar direccion</Text>
                         </Pressable>
-                        <MapPreview location={location} />
                     </View>
                 </View>) : (<Text>{error}</Text>)}
         </View>
@@ -87,16 +93,24 @@ const styles = StyleSheet.create({
         paddingBottom: 130,
         paddingTop: 40,
     },
+    location: {
+        flexDirection: 'row',
+        gap: 5,
+    },
+    locationContainer: {
+        gap: 18,
+        flexDirection: 'row',
+    },
     noLocationContainer: {
         padding: 10,
         justifyContent: 'center',
         alignItems: 'center',
-        gap: 10,
+        gap: 20,
     },
-    address: {
-        padding: 10,
+    textTitle:{
         fontFamily: 'PoppinsBold',
         fontSize: 20,
+        textAlign: 'center',
     },
     button: {
         width: '80%',
@@ -116,7 +130,7 @@ const styles = StyleSheet.create({
     text1: {
         fontFamily: 'PoppinsRegular',
         fontSize: 15,
-        color: 'black',
+        color: colors.buttons1,
     },
     text2: {
         color: colors.buttons1,

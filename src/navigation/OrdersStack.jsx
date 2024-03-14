@@ -8,7 +8,7 @@ const Stack = createNativeStackNavigator();
 
 const  OrdersStack = () => {
     return (
-        <Stack.Navigator initialRouteName='Orders' screenOptions={{header: () => <Header title='Orders'/>}} >
+        <Stack.Navigator initialRouteName='Orders' screenOptions={{header: () => <Header title='Ordenes realizadas'/>}} >
             <Stack.Screen name='Orders' component={Orders}/>
         </Stack.Navigator>
     );

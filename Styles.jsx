@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
         marginRight: 'auto',
         marginTop:5,
         marginBottom:10,
-        backgroundColor: colors.buttons1,
+        backgroundColor: colors.buttons2,
         shadowOpacity: 0.58,
         shadowRadius: 16.00,
         elevation: 18,

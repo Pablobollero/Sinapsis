@@ -54,7 +54,7 @@ const Signup = ({navigation}) => {
 
     return (
         <View style={styles.container}>
-            <Text>Ingresa los siguientes datos para crear una cuenta!</Text>
+            <Text style={styles.text}>Ingresa los siguientes datos para crear una cuenta!</Text>
             <InputForm label={"Email"} error={errorEmail} onChange={setEmail} />
             <InputForm label={"Password"} error={errorPassword} onChange={setPassword} isSecure={true} />
             <InputForm label={"Confirm Password"} error={errorConfirmPassword} onChange={setConfirmPassword} isSecure={true} />
@@ -71,21 +71,30 @@ export default Signup;
 const styles = StyleSheet.create({
     container: {
         backgroundColor: 'white',
-        padding: 10,
-        gap: 15,
+        paddingTop: 45,
+        paddingLeft: 35,
+        paddingRight: 35,
+        gap: 35,
         alignItems: 'center',
         justifyContent: 'flex-start',
         flex: 1,
     },
     button: {
-        width: '60%',
-        elevation: 10,
         backgroundColor: colors.buttons2,
+        borderRadius: 6,
         justifyContent: 'center',
         alignItems: 'center',
-        padding: 8,
+        padding: 12,
+        width: '30%',
+        shadowOpacity: 0.58,
+        shadowRadius: 16.00,
+        elevation: 18,
+        shadowOffset: {
+            width: 0,
+            height: 12,
+        }
     },
     text: {
-        fontFamily: 'PoppinsBold',
+        fontFamily: 'PoppinsRegular',
     },
 });
