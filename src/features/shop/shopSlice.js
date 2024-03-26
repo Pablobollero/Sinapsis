@@ -3,7 +3,7 @@ import allProducts from '../../data/products.json';//Remover y modificar logica
 import allCategories from '../../data/categories.json';//Remover y modificar logica
 
 export const shopSlice = createSlice({
-    name: 'shopo',
+    name: 'shop',
     initialState: {
         value: {
             products: allProducts,//remover y acomodar logica

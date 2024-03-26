@@ -4,7 +4,7 @@ export const cartSlice = createSlice ({
     name: "cart",
     initialState: {
         value: {
-            user: "userLogged", //Cambiar logica
+            user: "userLogged",
             updatedAt: new Date().toLocaleString(),
             total: null,
             items: [],

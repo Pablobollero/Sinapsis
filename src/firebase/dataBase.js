@@ -1,1 +1,1 @@
-export const base_url = 'https://sinapsisdb-reactnative-course-default-rtdb.firebaseio.com/';
+export const base_url = 'https://sinapsis-com61300-default-rtdb.firebaseio.com/';
