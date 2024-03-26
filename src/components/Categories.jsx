@@ -1,5 +1,5 @@
-import { View, FlatList } from 'react-native'
-import React from 'react'
+import { View, FlatList } from 'react-native';
+import React from 'react';
 import styles from '../../Styles';
 import CategoryItem from './CategoryItem';
 import { useGetCategoriesQuery } from '../services/shopService';

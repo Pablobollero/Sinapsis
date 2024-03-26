@@ -11,8 +11,7 @@ const ProductItem = ({ product, navigation }) => {
     
     //This will tell us the mobile measures.
     const {width, height} = useWindowDimensions();
-    // console.log(width, height);
-
+    
         //This Effect will detect the user event how he is handling the mobile orientation.
         useEffect(() => {
             if (height > width) {

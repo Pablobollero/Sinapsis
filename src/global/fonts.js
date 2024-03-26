@@ -1,6 +1,6 @@
 const fonts = {
-    PoppinsRegular: require('../../assets/fonts/Poppins-Regular.ttf'),
-    PoppinsBold: require('../../assets/fonts/Poppins-Bold.ttf'),
+    Regular: require('../../assets/fonts/Orbitron-Regular.ttf'),
+    Bold: require('../../assets/fonts/Orbitron-Bold.ttf'),
 }
 
 export default fonts;

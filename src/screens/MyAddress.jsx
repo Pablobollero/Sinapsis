@@ -66,12 +66,12 @@ const style = StyleSheet.create ({
         paddingRight: 35,
     },
     textTitle: {
-        fontFamily: 'PoppinsBold',
+        fontFamily: 'Bold',
         fontSize: 20,
         textAlign: 'center',
     },
     paragraph: {        
-    fontFamily: 'PoppinsRegular',
+    fontFamily: 'Regular',
     fontSize: 15,
     textAlign: 'center',
     letterSpacing: 1.5,

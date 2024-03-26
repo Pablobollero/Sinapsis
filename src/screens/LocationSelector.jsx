@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
         gap: 20,
     },
     textTitle:{
-        fontFamily: 'PoppinsBold',
+        fontFamily: 'Bold',
         fontSize: 20,
         textAlign: 'center',
     },
@@ -135,12 +135,12 @@ const styles = StyleSheet.create({
         }
     },
     text: {
-        fontFamily: 'PoppinsBold',
+        fontFamily: 'Bold',
         fontSize: 15,
         color: 'black',
     },
     text1: {
-        fontFamily: 'PoppinsRegular',
+        fontFamily: 'Regular',
         fontSize: 15,
         color: colors.buttons1,
     },
@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
     },
     paragraph: {
-        fontFamily: 'PoppinsRegular',
+        fontFamily: 'Regular',
         fontSize: 15,
         textAlign: 'center',
         letterSpacing: 1.5,

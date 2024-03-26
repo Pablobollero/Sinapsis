@@ -19,7 +19,7 @@ const MyProfileStack = () => {
             <Stack.Group screenOptions={{header: () => <Header title='Ubicacion'/> }}>
             <Stack.Screen name='My Address' component={MyAddress} />
             </Stack.Group>
-            <Stack.Group screenOptions={{header: () => <Header title='Configuracion de ubicacion'/> }}>
+            <Stack.Group screenOptions={{header: () => <Header title='Config. de ubicacion'/> }}>
             <Stack.Screen name='Location Selector' component={LocationSelector} />
             </Stack.Group>
         </Stack.Navigator>

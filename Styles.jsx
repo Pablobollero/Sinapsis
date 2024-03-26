@@ -1,6 +1,6 @@
-import { Platform, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 import colors from "./src/global/colors";
-import Constants from 'expo-constants';
+
 
 const styles = StyleSheet.create({
     appContainer: {
@@ -15,17 +15,6 @@ const styles = StyleSheet.create({
     itemListCategoriesContainer: {
         flex: 1,
         width: '100%',
-    },
-    headerContainer: {
-        backgroundColor: colors.background1,
-        fontSize:30,
-        width: '100%',
-        marginTop: Platform.OS === 'android' ? Constants.statusBarHeight : 0,
-    },
-    headerTitle: {
-        color:'#fff',
-        fontSize:30,
-        textAlign: 'center',
     },
     categoriesContainer: {
         height: '90.5%',
@@ -80,12 +69,12 @@ const styles = StyleSheet.create({
     productItemText0: {
         fontSize: 18,
         textAlign:'center',
-        fontFamily:'PoppinsRegular',
+        fontFamily:'Regular',
     },
     productItemText1: {
         fontSize: 14,
         textAlign:'center',
-        fontFamily:'PoppinsRegular',
+        fontFamily:'Regular',
     },
     productItemImage: {
         width: '100%',
@@ -175,7 +164,7 @@ const styles = StyleSheet.create({
     cartText:{
         marginTop: 25,
         marginLeft: 12,
-        fontFamily:'PoppinsBold',
+        fontFamily:'Bold',
     },
     tabBar: {
         backgroundColor: colors.background2,
@@ -211,12 +200,12 @@ const styles = StyleSheet.create({
         padding: 5,
     },
     orderItemText: {
-        fontFamily:'PoppinsRegular',
+        fontFamily:'Regular',
         fontSize: 17,
         marginTop: 5,
     },
     orderItemText1: {
-        fontFamily:'PoppinsBold',
+        fontFamily:'Bold',
         fontSize: 17,
         marginTop: 17,
     },

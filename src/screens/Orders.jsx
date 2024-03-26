@@ -1,8 +1,8 @@
-import { View, FlatList } from 'react-native';
+import { View, FlatList, StyleSheet } from 'react-native';
 import React from 'react';
 import orders from '../data/orders.json';
 import OrderItem from '../components/OrderItem';
-import styles from '../../Styles';
+import colors from '../global/colors';
 
 const Orders = () => {
     return (
@@ -17,3 +17,10 @@ const Orders = () => {
 };
 
 export default Orders;
+
+const styles = StyleSheet.create({
+    stackstyles:{
+        flex: 1,
+        backgroundColor: colors.background3,
+    },
+})

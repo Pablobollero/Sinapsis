@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Pressable } from 'react-native'
+import { StyleSheet, Text, View, ActivityIndicator } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import InputForm from '../components/InputForm';
 import { useSignUpMutation } from '../services/authService';
@@ -8,7 +8,7 @@ import { setUser } from '../features/authSlice';
 import { signupSchema } from '../validations/signupSchema';
 import colors from '../global/colors';
 
-const Signup = ({navigation}) => {
+const Signup = () => {
     const [email, setEmail] = useState("");
     const [errorEmail, setErrorEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -29,25 +29,28 @@ const Signup = ({navigation}) => {
 
     const onSubmit = () => {
         try {
-            signupSchema.validateSync({ email, password, confirmPassword })
+            signupSchema
+                .validateSync({ email, password, confirmPassword }, { abortEarly: false });
+            setErrorEmail("");
+            setErrorPassword("");
+            setErrorConfirmPassword("");
             triggerSignUp({ email, password, confirmPassword });
         } catch (err) {
-            console.log('Catch error');
-            console.log(err.path);
-            switch (err.path) {
-                case 'email':
-                    setErrorEmail(err.message)
-                    break;
-                case 'password':
-                    setErrorPassword(err.message)
-                    break;
-                case 'confirmPassword':
-                    setErrorConfirmPassword(err.message)
-                    break;
-                default:
-                    break;
-            }
-            console.log(err.message);
+            err.inner.forEach((error) => {
+                switch (error.path) {
+                    case 'email':
+                        setErrorEmail(error.message);
+                        break;
+                    case 'password':
+                        setErrorPassword(error.message);
+                        break;
+                    case 'confirmPassword':
+                        setErrorConfirmPassword(error.message);
+                        break;
+                    default:
+                        break;
+                }
+            });
         }
     };
 
@@ -57,11 +60,22 @@ const Signup = ({navigation}) => {
             <Text style={styles.text}>Ingresa los siguientes datos para crear una cuenta!</Text>
             <InputForm label={"Email"} error={errorEmail} onChange={setEmail} />
             <InputForm label={"Password"} error={errorPassword} onChange={setPassword} isSecure={true} />
-            <InputForm label={"Confirm Password"} error={errorConfirmPassword} onChange={setConfirmPassword} isSecure={true} />
-            <SubmitButton title={'Registrate!'} onPress={onSubmit} />
-            <Text style={styles.text} >Ups! Te equivocaste? No hay problema!</Text>
-            <Text style={styles.text} >Si ya estas registrado, haz click en el boton de abajo!</Text>
-            <Pressable style={styles.button} onPress={() => navigation.navigate('Login')} ><Text>Ir al Log in!</Text></Pressable>
+            <InputForm label={"Confirmar Password"} error={errorConfirmPassword} onChange={setConfirmPassword} isSecure={true} />
+            {result.isLoading ? (<ActivityIndicator size="large" color="#00f3ff" />) : (<SubmitButton style={styles.button} title={'Registrate!'} onPress={onSubmit} />)}
+            <View style={styles.tipsContainer}>
+                <Text style={styles.title}>
+                    Sina Tips!
+                </Text>
+                <Text style={styles.paragraph}>
+                    <Text style={styles.title}>Email:</Text> Debe ser aquel que utilizaste al momento del Registro, es decir, cuando creaste tu cuenta.
+                </Text>
+                <Text style={styles.paragraph}>
+                    <Text style={styles.title}>Password:</Text> Debe ser aquella que vinculaste al email Registrado y no tener menos de 6 caracteres.
+                </Text>
+                <Text style={styles.paragraph}>
+                    <Text style={styles.title}>Confirmar Password:</Text> Debe ser la misma ingresada en Password, es decir, deben coincidir, ser identicas.
+                </Text>
+            </View>
         </View>
     );
 };
@@ -74,7 +88,7 @@ const styles = StyleSheet.create({
         paddingTop: 45,
         paddingLeft: 35,
         paddingRight: 35,
-        gap: 35,
+        gap: 25,
         alignItems: 'center',
         justifyContent: 'flex-start',
         flex: 1,
@@ -95,6 +109,25 @@ const styles = StyleSheet.create({
         }
     },
     text: {
-        fontFamily: 'PoppinsRegular',
+        fontFamily: 'Regular',
+        letterSpacing: 1.75,
+        fontSize: 16,
+        textAlign: 'center',
+    },
+    tipsContainer: {
+        width: '90%',
+        gap: 30,
+    },
+    title: {
+        textAlign: 'center',
+        fontSize: 14,
+        fontFamily: 'Bold',
+        letterSpacing: 1.5,
+    },
+    paragraph: {
+        fontFamily: 'Regular',
+        letterSpacing: 1.75,
+        fontSize: 12,
+        textAlign: 'center',
     },
 });

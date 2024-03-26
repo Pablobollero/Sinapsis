@@ -1,4 +1,4 @@
-import { View, Text, Pressable, Image } from 'react-native';
+import { View, Text, Pressable, Image} from 'react-native';
 import React, { useEffect, useState } from 'react';
 import allProducts from '../data/products.json';
 import styles from "../../Styles";
@@ -6,6 +6,7 @@ import { AntDesign } from '@expo/vector-icons';
 import Counter from '../components/Counter';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../features/shop/cartSlice';
+import SubmitButton from '../components/SubmitButton';
 
 
 const ItemDetail = ({ navigation, route}) => {
@@ -37,8 +38,7 @@ const ItemDetail = ({ navigation, route}) => {
                 <View style={styles.itemDetail}>
                     <View style={styles.itemDetailTitleContainer}>
                         <Text style={styles.itemDetailTitle}>{product.title}</Text>
-                    </View
-                    >
+                    </View>
                     <View style={styles.itemDetailImageContainer}>
                     <Image style={styles.itemDetailImage} resizeMode='cover' source={{ uri: product.images[0] }} />
                     </View>
@@ -47,11 +47,7 @@ const ItemDetail = ({ navigation, route}) => {
                     <Text style={styles.itemDetailTextMoney}>{'$' + product.price}</Text>
                     <View style={styles.itemDetailContainer1}>
                     <Counter/>
-                    <Pressable style={styles.button} onPress={onAddCart}>
-                        <Text style={styles.itemDetailComprar}>
-                            AGREGAR
-                        </Text>
-                    </Pressable>
+                    <SubmitButton style={styles.button} title={'Confirmar!'} onPress={onAddCart} />
                     </View>
                     
                     </View>

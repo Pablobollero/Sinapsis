@@ -50,18 +50,11 @@ const styles = StyleSheet.create({
         padding: 5,
         textAlign: 'center',
         fontSize: 20,
-        fontFamily: 'PoppinsRegular',
-    },
-    spanInput: {
-        width: '43%',
-        padding: 10,
-        textAlign: 'center',
-        fontSize: 16,
-        fontFamily: 'PoppinsRegular',
+        fontFamily: 'Regular',
     },
     buttonText: {
         fontSize: 18,
-        fontFamily: 'PoppinsBold',
+        fontFamily: 'Bold',
         color: colors.background3,
     },
 })

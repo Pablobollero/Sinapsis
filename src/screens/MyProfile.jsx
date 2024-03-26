@@ -65,14 +65,14 @@ const styles = StyleSheet.create ({
         }
     },
     buttonText: {
-        fontFamily: 'PoppinsBold',
+        fontFamily: 'Bold',
     },
     paragraphContainer: {
         paddingVertical: 10,
         paddingHorizontal: 25,
     },
     paragraph: {        
-        fontFamily: 'PoppinsRegular',
+        fontFamily: 'Regular',
         fontSize: 15,
         textAlign: 'center',
         letterSpacing: 1.5,

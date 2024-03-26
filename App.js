@@ -2,11 +2,14 @@ import { useFonts } from 'expo-font';
 import fonts from './src/global/fonts';
 import { SafeAreaView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import styles from './Styles';
-import TabNavigator from './src/navigation/TabNavigator';
 import { Provider } from 'react-redux';
 import store from './src/store/indexx';
 import MainNavigator from './src/navigation/MainNavigator';
+import { init } from './src/db/index';
+
+init()
+  .then()
+  .catch()
 
 export default function App() {
 
@@ -25,5 +28,3 @@ export default function App() {
     </Provider>
   );
 }
-
-
