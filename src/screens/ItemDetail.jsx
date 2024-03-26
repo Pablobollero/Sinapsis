@@ -1,12 +1,12 @@
-import { View, Text, Pressable, Image} from 'react-native';
+import { View, Text, Pressable, Image, StyleSheet} from 'react-native';
 import React, { useEffect, useState } from 'react';
 import allProducts from '../data/products.json';
-import styles from "../../Styles";
 import { AntDesign } from '@expo/vector-icons';
 import Counter from '../components/Counter';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../features/shop/cartSlice';
 import SubmitButton from '../components/SubmitButton';
+import colors from '../global/colors';
 
 
 const ItemDetail = ({ navigation, route}) => {
@@ -58,3 +58,64 @@ const ItemDetail = ({ navigation, route}) => {
 };
 
 export default ItemDetail;
+
+const styles = StyleSheet.create({
+    itemContainer: {
+        flex: 1,
+        paddingBottom: 100,
+        width: '100%',
+        backgroundColor: colors.background3,
+    },
+    itemDetail: {
+        flex: 0.65,
+        alignItems: 'center',
+        paddingHorizontal: 17,
+    },
+    itemDetailTitleContainer: {
+        alignItems: 'center',
+        marginTop: 18,
+    },
+    itemDetailTitle: {
+        fontSize: 25,
+    },
+    itemDetailImageContainer: {
+        width: '40%',
+        height: '40%',
+        marginTop: 30,
+    },
+    itemDetailImage: {
+        width: '100%',
+        height: '100%',
+    },
+    itemDetailText: {
+        fontSize: 18,
+        marginTop: 30,
+    },
+    itemDetailTextMoney: {
+        fontSize: 25,
+        marginTop: 30,
+    },
+    itemDetailContainer1: {
+        alignItems: 'center',
+    },
+    button: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: 12,
+        paddingHorizontal: 20,
+        borderRadius: 10,
+        elevation: 10,
+        backgroundColor: colors.background2,
+    },
+    backButton: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginBottom: 10,
+        marginTop: 10,
+        gap: 8,
+        marginLeft: 8,
+    },
+    backButtonText: {
+        fontSize: 14,
+    },
+})
