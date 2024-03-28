@@ -65,41 +65,41 @@ Estas dependencias constituyen la base sobre la que se construye Sinapsis Shop A
 
 - **Registro**: Los usuarios pueden crear una cuenta proporcionando un correo electrónico y una contraseña. El proceso incluye verificación de email para validar la cuenta.
 
-![Screenshot del screen Registro](/assets/mdPics/Signup.jpg)
+    ![Screenshot del screen Registro](/assets/mdPics/Signup.jpg)
 
 - **Inicio de Sesión**: Los usuarios registrados pueden acceder a su cuenta utilizando su correo electrónico y contraseña.
 
-![Screenshot del screen Inicio de Sesion](/assets/mdPics/Login.jpg)
+    ![Screenshot del screen Inicio de Sesion](/assets/mdPics/Login.jpg)
 
 - **Cierre de Sesión**: Los usuarios pueden cerrar sesión de forma segura, lo cual borra su sesión del dispositivo.
 
-![Screenshot del boton Cerrar Sesion](/assets/mdPics/CloseSession.jpg)
+    ![Screenshot del boton Cerrar Sesion](/assets/mdPics/CloseSession.jpg)
 
 ### Visualización de Productos por Categorías
 - Los productos están organizados por categorías para facilitar la navegación. Los usuarios pueden seleccionar una categoría para ver los productos relacionados, mejorando la experiencia de compra.
-![Screenshot del screen Vista por Categorias](/assets/mdPics/CategoriesList.jpg)
+    ![Screenshot del screen Vista por Categorias](/assets/mdPics/CategoriesList.jpg)
 
 ### Navigation Tab Bar
 
 El Navigation Tab Bar en Sinapsis Shop App ofrece una navegación intuitiva y accesible por las principales secciones de la aplicación, mejorando significativamente la experiencia de usuario. Cada pestaña del Tab Bar está diseñada para facilitar el acceso a las funcionalidades clave de la aplicación:
 
-![Screenshot del Navigation Tab Bar](/assets/mdPics/NavigationTabBar.jpg)
+    ![Screenshot del Navigation Tab Bar](/assets/mdPics/NavigationTabBar.jpg)
 
 - **ShopStack**: Permite a los usuarios explorar el catálogo completo de productos disponibles en Sinapsis. Desde aquí, pueden navegar por diferentes categorías, ver las novedades y las ofertas especiales.
 
-![Screenshot del ShopStack](/assets/mdPics/ShopStack.jpg)
+    ![Screenshot del ShopStack](/assets/mdPics/ShopStack.jpg)
 
 - **CartStack**: Ofrece a los usuarios una vista rápida de su carrito de compras actual, permitiéndoles revisar los productos añadidos, modificar cantidades, eliminar artículos no deseados o proceder al checkout.
 
-![Screenshot del CartStack](/assets/mdPics/CartStack.jpg)
+    ![Screenshot del CartStack](/assets/mdPics/CartStack.jpg)
 
 - **OrdersStack**: Los usuarios pueden visualizar el historial completo de sus pedidos, incluyendo detalles como fecha de compra, estado del pedido, y un resumen de los artículos comprados.
 
-![Screenshot del OrdersStack](/assets/mdPics/OrderStack.jpg)
+    ![Screenshot del OrdersStack](/assets/mdPics/OrderStack.jpg)
 
 - **MyProfileStack**: Facilita el acceso a la personalización del perfil del usuario, donde pueden actualizar su foto de perfil, gestionar su dirección de envío, y ajustar otras preferencias de cuenta.
 
-![Screenshot del ProfileStack](/assets/mdPics/MyProfileStack.jpg)
+    ![Screenshot del ProfileStack](/assets/mdPics/MyProfileStack.jpg)
 
 Cada una de estas pestañas está optimizada para ofrecer una experiencia de usuario fluida y coherente, asegurando que los usuarios puedan navegar por la aplicación con facilidad y realizar sus tareas deseadas de manera eficiente.
 
@@ -107,44 +107,44 @@ Cada una de estas pestañas está optimizada para ofrecer una experiencia de usu
 ### Búsqueda, Filtrado y Detalle de Productos
 - **Búsqueda**: Los usuarios pueden buscar productos utilizando palabras clave. La búsqueda devuelve productos que coinciden con el término buscado en su título o descripción.
 
-![Screenshot del Input para Busqueda](/assets/mdPics/SearchFilter.jpg)
+    ![Screenshot del Input para Busqueda](/assets/mdPics/SearchFilter.jpg)
 
 - **Filtrado**: Los usuarios pueden filtrar los productos dentro de una categoría por diferentes criterios como precio, popularidad, o novedades.
 
-![Screenshot de la lista de productos filtrada](/assets/mdPics/ItemsList.jpg)
+    ![Screenshot de la lista de productos filtrada](/assets/mdPics/ItemsList.jpg)
 
 - **Detalle**: Los usuarios pueden obtener informacion detallada sobre los productos por diferentes criterios como descripcion y precio.
 
-![Screenshot del detalle del producto](/assets/mdPics/ItemsList.jpg)
+    ![Screenshot del detalle del producto](/assets/mdPics/ItemsList.jpg)
 
 ### Gestión del Carrito de Compras
 - Los usuarios pueden añadir productos a su carrito de compras desde las páginas de detalles del producto.
 - Pueden modificar la cantidad de cada producto en el carrito o eliminar productos que ya no deseen comprar.
 - El carrito muestra el total de la compra y permite a los usuarios proceder al checkout.
 
-![Screenshot del Carrito de compras](/assets/mdPics/Cart.jpg)
+    ![Screenshot del Carrito de compras](/assets/mdPics/Cart.jpg)
 
 ### Realización y Visualización de Pedidos
 - **Realización de Pedidos**: Una vez que los usuarios están listos para comprar, pueden proceder a realizar el pedido, proporcionando detalles de pago y dirección de envío.
 - **Visualización de Pedidos**: Los usuarios pueden ver un historial de sus pedidos realizados, incluyendo los detalles de cada pedido como la lista de productos, la cantidad pagada, y el estado del envío.
 
-![Screenshot de las ordenes confirmadas](/assets/mdPics/OrdersPlaced.jpg)
+    ![Screenshot de las ordenes confirmadas](/assets/mdPics/OrdersPlaced.jpg)
 
 ### Personalización del Perfil de Usuario
 
-![Screenshot del ProfileStack](/assets/mdPics/MyProfile.jpg)
+    ![Screenshot del ProfileStack](/assets/mdPics/MyProfile.jpg)
 
 - **Foto de Perfil**: Los usuarios pueden subir o cambiar su foto de perfil.
 
-![Screenshot del ProfileStack](/assets/mdPics/Camera.jpg)
-![Screenshot del ProfileStack](/assets/mdPics/ProfilePictureConfirmation.jpg)
-![Screenshot del ProfileStack](/assets/mdPics/MyProfileActualized.jpg)
+    ![Screenshot del ProfileStack](/assets/mdPics/Camera.jpg)
+    ![Screenshot del ProfileStack](/assets/mdPics/ProfilePictureConfirmation.jpg)
+    ![Screenshot del ProfileStack](/assets/mdPics/MyProfileActualized.jpg)
 
 - **Dirección**: Los usuarios pueden añadir o modificar su dirección de envío. Esta dirección se puede utilizar posteriormente para facilitar el proceso de checkout.
 
-![Screenshot del ProfileStack](/assets/mdPics/GoogleMapsPerm.jpg)
-![Screenshot del ProfileStack](/assets/mdPics/MyLocation.jpg)
-![Screenshot del ProfileStack](/assets/mdPics/ConfirmLocation.jpg)
+    ![Screenshot del ProfileStack](/assets/mdPics/GoogleMapsPerm.jpg)
+    ![Screenshot del ProfileStack](/assets/mdPics/MyLocation.jpg)
+    ![Screenshot del ProfileStack](/assets/mdPics/ConfirmLocation.jpg)
 
 
 ## Autoría
