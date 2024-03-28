@@ -83,7 +83,8 @@ Estas dependencias constituyen la base sobre la que se construye Sinapsis Shop A
 
 El Navigation Tab Bar en Sinapsis Shop App ofrece una navegación intuitiva y accesible por las principales secciones de la aplicación, mejorando significativamente la experiencia de usuario. Cada pestaña del Tab Bar está diseñada para facilitar el acceso a las funcionalidades clave de la aplicación:
 
-    ![Screenshot del Navigation Tab Bar](/assets/mdPics/NavigationTabBar.jpg)
+   ![Screenshot del Navigation Tab Bar](/assets/mdPics/NavigationTabBar.jpg)
+
 
 - **ShopStack**: Permite a los usuarios explorar el catálogo completo de productos disponibles en Sinapsis. Desde aquí, pueden navegar por diferentes categorías, ver las novedades y las ofertas especiales.
 
