@@ -55,6 +55,8 @@ Estos pasos deberían guiarte a través del proceso de instalación del proyecto
 
 - `redux`: Un contenedor de estado predecible para aplicaciones JavaScript. Se usa para gestionar el estado de la aplicación de forma centralizada, lo que es útil para aplicaciones con complejidad considerable.
 
+- `yup`: Yup es una biblioteca de construcción de esquemas para análisis y validación de valores JavaScript. En Sinapsis Shop App, utilizamos Yup para garantizar que la entrada del usuario en formularios cumpla con ciertos requisitos antes de ser procesada o enviada al servidor. Esto mejora la seguridad de la aplicación, la experiencia del usuario y la integridad de los datos.
+
 Estas dependencias constituyen la base sobre la que se construye Sinapsis Shop App, permitiendo una estructura robusta, manejo eficiente del estado, y una experiencia de usuario rica y responsiva. Además de estas, el proyecto utiliza otras bibliotecas y herramientas para tareas específicas como validación de formularios, manejo de solicitudes HTTP, y estilización de componentes, entre otras, para facilitar el desarrollo y mejorar la experiencia del usuario.
 
 
@@ -74,6 +76,22 @@ Estas dependencias constituyen la base sobre la que se construye Sinapsis Shop A
 - **Cierre de Sesión**: Los usuarios pueden cerrar sesión de forma segura, lo cual borra su sesión del dispositivo.
 
     ![Screenshot del boton Cerrar Sesion](/assets/mdPics/CloseSession.jpg)
+
+### Validación de Formularios con Yup
+
+#### Características Principales
+
+- **Sintaxis Concisa**: Yup permite definir un esquema de validación con una sintaxis clara y concisa, facilitando la lectura y mantenimiento del código.
+- **Validación Asíncrona y Sincrónica**: Ofrece soporte tanto para validaciones síncronas como asíncronas, lo cual es útil para verificaciones que requieran de llamadas a una API, por ejemplo, para validar la unicidad de un correo electrónico.
+- **Personalización de Mensajes de Error**: Permite personalizar los mensajes de error para cada regla de validación, lo que ayuda a proporcionar retroalimentación específica y útil al usuario.
+- **Casting Automático de Tipos**: Capacidad de transformar automáticamente los valores de los campos a tipos específicos según el esquema definido.
+
+#### Implementación en Sinapsis Shop App
+
+En nuestra aplicación, utilizamos Yup principalmente en los formularios de autenticación y registro.
+
+- Para el formulario de **registro** asegura que el usuario proporcione un correo electrónico válido, una contraseña con la longitud adecuada, y que la confirmación de la contraseña coincida exactamente con la contraseña ingresada.
+- Para el formulario de **login** asegura que el usuario proporcione un correo electrónico válido, una contraseña con la longitud adecuada, y que la misma sea la vinculada con el email registrado.
 
 ### Visualización de Productos por Categorías
 - Los productos están organizados por categorías para facilitar la navegación. Los usuarios pueden seleccionar una categoría para ver los productos relacionados, mejorando la experiencia de compra.
