@@ -132,7 +132,7 @@ Cada una de estas pestañas está optimizada para ofrecer una experiencia de usu
 
 ### Personalización del Perfil de Usuario
 
-    ![Screenshot del ProfileStack](/assets/mdPics/MyProfile.jpg)
+   ![Screenshot del ProfileStack](/assets/mdPics/MyProfile.jpg)
 
 - **Foto de Perfil**: Los usuarios pueden subir o cambiar su foto de perfil.
 
