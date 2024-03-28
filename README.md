@@ -173,7 +173,7 @@ Proyecto desarrollado por Pablo Bollero.
 - **Perfil de GitHub**: [Link](https://github.com/Pablobollero) 
 - **LinkedIn**: [Link](https://www.linkedin.com/in/pablo-bolleroh).
 - **Contacto**: En caso de querer ponerse en contacto, hacerlo mediante [LinkedIn](www.linkedin.com/in/pablo-bolleroh) o [Email](mailto:pablo.bolleroh@gmail.com).
-
+    
 - **Agradecimientos especiales**: 
 
 	``Profesor =>`` **Gaston Avogadro** [GitHub](https://github.com/GastonAvogadro)
