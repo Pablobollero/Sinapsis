@@ -171,9 +171,9 @@ Cada una de estas pestañas está optimizada para ofrecer una experiencia de usu
 Proyecto desarrollado por Pablo Bollero.
 
 - **Perfil de GitHub**: [Link](https://github.com/Pablobollero) 
-- **LinkedIn**: [Link](https://www.linkedin.com/in/pablo-bolleroh)
-- **Contribuciones al proyecto**: Detalla tu rol específico en el desarrollo de la aplicación. Por ejemplo, si te especializaste en ciertas áreas como la interfaz de usuario, la lógica de backend, o la gestión de estado, menciona estas contribuciones.
+- **LinkedIn**: [Link](https://www.linkedin.com/in/pablo-bolleroh).
 - **Contacto**: En caso de querer ponerse en contacto, hacerlo mediante [LinkedIn](www.linkedin.com/in/pablo-bolleroh) o [Email](mailto:pablo.bolleroh@gmail.com).
+
 - **Agradecimientos especiales**: 
 
 	``Profesor =>`` **Gaston Avogadro** [GitHub](https://github.com/GastonAvogadro)
